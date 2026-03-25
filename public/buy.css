@@ -1,0 +1,132 @@
+/* Общие стили для страницы покупки */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #EAEEE5; /* Легкий бежевый фон */
+    overflow-x: hidden;
+}
+
+/* Заголовок "Оформить покупку" */
+h2 {
+    text-align: center;
+    color: black;
+    font-size: 40px;
+    margin-top: 40px;
+}
+
+/* Шапка сайта */
+header {
+    background-color: #c2bfbf; /* Цвет шапки */
+    padding: 10px 0;
+    color: black;
+    backdrop-filter: blur(8px);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+}
+
+/* Меню */
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav {
+    margin-left: 1350px;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Основная секция */
+.buy-section {
+    padding: 40px 20px;
+}
+
+.purchase-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"], select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="email"]:focus, select:focus {
+    outline: none;
+    border: 1px solid #4CAF50;
+}
+
+/* Кнопка "Купить" */
+.buy-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+}
+
+.buy-btn:hover {
+    background-color: #45a049;
+}
+#successModal {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+/* Футер */
+footer {
+    background-color: transparent; /* Прозрачный футер */
+    color: black; /* Цвет текста */
+    text-align: center; /* Выравнивание по центру */
+    padding: 10px;
+    position: fixed; /* Закрепляем футер внизу */
+    bottom: 0;
+    width: 100%; /* Ширина футера на всю страницу */
+}

@@ -1,0 +1,206 @@
+/* Общие стили для второй страницы */
+body {
+    font-family: Arial, sans-serif; /* Шрифт для текста */
+    background-color: #f4f4f4; /* Легкий бежевый фон */
+    color: #333; /* Основной цвет текста */
+    margin: 0; /* Убираем внешние отступы */
+    padding: 0; /* Убираем внутренние отступы */
+}
+
+/* Заголовки */
+h1{
+    text-align: center; /* Центрируем текст */
+    color: black; /* Черный цвет для заголовка "все игры" */
+}
+h2 {
+    text-align: center; /* Центрируем текст */
+    color: black; /* Черный цвет для заголовка "все игры" */
+    font-size: 60px; /* Размер шрифта */
+}
+
+/* Шапка на второй странице */
+header {
+    background-color: #c2bfbf; /* Цвет фона шапки */
+    padding: 10px 0; /* Отступы сверху и снизу */
+    color: white; /* Цвет текста в шапке */
+    backdrop-filter: blur(8px); /* Размытие фона */
+}
+
+/* Контейнер для шапки */
+header .container {
+    margin-left: 20px; /* Сдвигаем контейнер шапки с левого края */
+    display: flex; /* Используем flexbox для выравнивания */
+    justify-content: flex-start; /* Выравнивание элементов по левому краю */
+    align-items: center; /* Центрируем элементы по вертикали */
+}
+
+/* Меню */
+header nav ul {
+    list-style-type: none; /* Убираем маркеры у списка */
+    margin: 0; /* Убираем внешние отступы */
+    padding: 0; /* Убираем внутренние отступы */
+}
+
+header nav {
+    margin-left: 1350px; /* Сдвигаем меню вправо */
+}
+
+/* Стили для пунктов меню */
+header nav ul li {
+    display: inline; /* Элементы меню в строку */
+    margin-left: 20px; /* Отступы между пунктами меню */
+}
+
+header nav ul li a {
+    color: white; /* Белый цвет текста в ссылках */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-weight: bold; /* Жирный шрифт */
+}
+
+/* Секция с играми */
+.hero {
+    padding: 40px 0; /* Отступы сверху и снизу */
+    margin-top: 50px; /* Отступ сверху */
+}
+
+.hero .container {
+    text-align: center; /* Центрируем все элементы внутри контейнера */
+}
+
+/* Стили для поля ввода поиска игры */
+.search-input {
+    position: absolute;
+    right: 20px; /* Позиционируем поле справа */
+    top: 120px; /* Сдвигаем поле вниз */
+    padding: 10px;
+    width: 300px; /* Ширина поля */
+    border-radius: 20px; /* Скругленные углы */
+    border: 1px solid #ccc; /* Цвет границы */
+    background-color: #f4f4f4; /* Цвет фона */
+    font-size: 16px; /* Размер шрифта */
+}
+
+/* Стилизация для фокуса на поле поиска */
+.search-input:focus {
+    outline: none; /* Убираем обводку при фокусе */
+    border: 1px solid #4CAF50; /* Цвет границы при фокусе */
+    background-color: #e8f5e9; /* Легкое изменение фона при фокусе */
+}
+
+/* Стили для изображений на второй странице */
+.hero .gallery {
+    display: grid; /* Используем сетку */
+    grid-template-columns: repeat(5, 1fr); /* 5 колонок */
+    gap: 20px; /* Отступы между изображениями */
+    padding: 20px;
+}
+
+/* Стили для каждой карточки с игрой */
+.hero .game-item {
+    text-align: center;
+    background-color: #ffffff; /* Белый фон карточки */
+    border-radius: 10px; /* Скругленные углы */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
+    position: relative; /* Для размещения подписи */
+}
+
+/* Настройка для изображений */
+.hero .game-item img {
+    width: 100%; /* Ширина изображения */
+    height: auto; /* Пропорциональная высота */
+    border-radius: 10px; /* Скругленные углы */
+    object-fit: cover; /* Обеспечивает покрытие изображения */
+}
+
+/* Добавление подписи над картинками */
+.hero .game-item p {
+    position: absolute;
+    top: 10px; /* Расположение подписи сверху */
+    left: 50%; /* Центрируем подпись по горизонтали */
+    transform: translateX(-50%); /* Центрируем точнее */
+    font-size: 18px; /* Размер шрифта */
+    font-weight: bold;
+    color: #333; /* Черный цвет для подписи */
+}
+
+/* Кнопка "Подробнее" */
+.hero .game-item .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #8c8c8c; /* Приглушенный цвет для кнопки */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Эффект при наведении на кнопку */
+.hero .game-item .btn:hover {
+    background-color: #757575;
+}
+
+/* Футер */
+footer {
+    background-color: transparent; /* Прозрачный футер */
+    color: black; /* Цвет текста */
+    text-align: center; /* Выравнивание по центру */
+    padding: 10px;
+    position: fixed; /* Закрепляем футер внизу */
+    bottom: 0;
+    width: 100%; /* Ширина футера на всю страницу */
+}
+
+/* Стили для модального окна */
+.game-modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    z-index: 1; /* Окно поверх других элементов */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+    padding-top: 60px; /* Отступ сверху */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%; /* Ширина окна */
+    position: relative;
+}
+
+/* Закрывающая кнопка */
+.close-btn {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    cursor: pointer;
+}
+
+/* Стили для изображения игры */
+.game-image {
+    width: 50%; /* Ширина изображения */
+    height: auto; /* Пропорциональная высота */
+    border-radius: 10px;
+}
+
+/* Кнопка "Купить" */
+.buy-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buy-btn:hover {
+    background-color: #45a049;
+}
